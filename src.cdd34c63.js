@@ -9,4 +9,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var s=e(require("./templates/contries-tps.hbs"));function e(s){return s&&s.__esModule?s:{default:s}}require("./sass/main.scss");
 },{"./templates/contries-tps.hbs":"VoJ3","./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-12-countries/src.1671ca81.js.map
+//# sourceMappingURL=/goit-js-hw-12-countries/src.cdd34c63.js.map
