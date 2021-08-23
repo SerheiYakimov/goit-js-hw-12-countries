@@ -7,32 +7,34 @@ import './sass/main.scss';
 
 
 const refs = {
-    input: document.querySelector('#searce')
+    form: document.querySelector('#form'),
+    input: document.querySelector('#search'),
+    container: document.querySelector('.container')
 };
 
    
 
-// refs.input.addEventListener('input', debounce(onFetchCountry(name)), 500);
+refs.input.addEventListener('input', debounce(onFetchCountry), 2000);
 
 
-// function onFetchCountry(e) {
-// na
-// }
-
-
-// function fetchCountries(searchQuery) {
-fetch('https://restcountries.eu/rest/v2/name/{name}')
+function onFetchCountry(e) {
+e.preventDefault();
+const name = refs.input.value; 
+fetch(`https://restcountries.eu/rest/v2/name/${name}`)
     .then(result => {
-        result.json();
+        return result.json();
     })
     .then(country => {
         console.log(country);
         const markUp = countryCardTps(country);
-        refs.input.insertAdjacentHTML('afterend', markUp);
-        const name = e.target.value;
+        console.log(markUp);
+        refs.container.insertAdjacentHTML('afterbegin', markUp);
+       
     })
     .catch(error => {
         console.log(error);
     })
-// searceQuery = refs.input.value;
-    // };
+}
+
+
+// function fetchCountries(searchQuery) {
