@@ -1,17 +1,14 @@
 
 
 import debounce from 'lodash.debounce';
-import countryCardTps from './templates/countries-tps.hbs';
-import countriesListTps from './templates/countries-list-tps.hbs';
- import { alert, defaultModules } from '../node_modules/@pnotify/core/dist/PNotify.js';
 
+import countriesListTps from './templates/countries-list-tps.hbs';
+import countryCardTps from './templates/countries-tps.hbs';
+import { alert, defaultModules } from '../node_modules/@pnotify/core/dist/PNotify.js';
 import '@pnotify/core/dist/BrightTheme.css';
 // import fetchCountries from './js/fetchCountries.js';
 import './sass/main.scss';
 
- alert({
-    text: 'Too many matches found! Please enter a more specific query!'
-  });
 
 
 const refs = {

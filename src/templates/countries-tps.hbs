@@ -1,6 +1,6 @@
 <div class="country-card">
     {{#each this}}
-    <h2 class="country-name">{{this.nativeName}}</h2>
+    <h2 class="country-name">{{this.name}}</h2>
     <p class="country-text">Capital: {{this.capital}}</p>
     <p class="country-text">Population: {{this.population}}</p>
     <ul class="country-text">Languages:
@@ -8,6 +8,6 @@
             <li class="language-item">{{this.name}}</li>
        {{/each}}
     </ul>
-    <img src={{this.flag}} alt={{this.nativeName}}>
+    <img src={{this.flag}} alt={{this.name}}>
     {{/each}}
 </div>
